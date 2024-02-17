@@ -84,6 +84,9 @@ local recoils = {
     [`weapon_hominglauncher`] = 0.0,
     [`weapon_compactlauncher`] = 0.5,
     [`weapon_rayminigun`] = 0.3,
+
+    -- Custom
+    [`weapon_beanbagshotgun`] = 0.0, -- qb-beanbagshotgun
 }
 
 CreateThread(function()
