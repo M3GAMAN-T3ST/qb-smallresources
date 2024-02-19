@@ -94,12 +94,14 @@ Config.Consumables = {
         ['sandwich'] = math.random(35, 54),
         ['tosti'] = math.random(40, 50),
         ['twerks_candy'] = math.random(35, 54),
-        ['snikkel_candy'] = math.random(40, 50)
+        ['snikkel_candy'] = math.random(40, 50),
+        ["chocolate"] = math.random(10, 15), -- rz-gym
     },
     drink = { -- default drink items
         ['water_bottle'] = math.random(35, 54),
         ['kurkakola'] = math.random(35, 54),
-        ['coffee'] = math.random(40, 50)
+        ['coffee'] = math.random(40, 50),
+        ["redbull"] = math.random(10, 15), -- rz-gym
     },
     alcohol = { -- default alcohol items
         ['whiskey'] = math.random(20, 30),
