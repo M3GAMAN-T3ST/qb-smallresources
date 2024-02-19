@@ -144,7 +144,29 @@ end
 
 -- Events
 
-RegisterNetEvent('consumables:client:Eat', function(itemName)
+-- RegisterNetEvent('consumables:client:Eat', function(itemName)
+--     QBCore.Functions.Progressbar('eat_something', Lang:t('consumables.eat_progress'), 5000, false, true, {
+--         disableMovement = false,
+--         disableCarMovement = false,
+--         disableMouse = false,
+--         disableCombat = true
+--     }, {
+--         animDict = 'mp_player_inteat@burger',
+--         anim = 'mp_player_int_eat_burger',
+--         flags = 49
+--     }, {
+--         model = 'prop_cs_burger_01',
+--         bone = 60309,
+--         coords = vec3(0.0, 0.0, -0.02),
+--         rotation = vec3(30, 0.0, 0.0),
+--     }, {}, function() -- Done
+--         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
+--         TriggerServerEvent('consumables:server:addHunger', QBCore.Functions.GetPlayerData().metadata.hunger + Config.Consumables.eat[itemName])
+--         TriggerServerEvent('hud:server:RelieveStress', math.random(2, 4))
+--     end)
+-- end)
+
+RegisterNetEvent('consumables:client:Eat', function(itemName) -- rz-gym
     QBCore.Functions.Progressbar('eat_something', Lang:t('consumables.eat_progress'), 5000, false, true, {
         disableMovement = false,
         disableCarMovement = false,
@@ -160,13 +182,39 @@ RegisterNetEvent('consumables:client:Eat', function(itemName)
         coords = vec3(0.0, 0.0, -0.02),
         rotation = vec3(30, 0.0, 0.0),
     }, {}, function() -- Done
+
+        if itemName == "chocolate" then
+            exports['ps-buffs']:AddBuff("gym-stamina", 300000)
+        end
+        
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
         TriggerServerEvent('consumables:server:addHunger', QBCore.Functions.GetPlayerData().metadata.hunger + Config.Consumables.eat[itemName])
         TriggerServerEvent('hud:server:RelieveStress', math.random(2, 4))
     end)
 end)
 
-RegisterNetEvent('consumables:client:Drink', function(itemName)
+-- RegisterNetEvent('consumables:client:Drink', function(itemName)
+--     QBCore.Functions.Progressbar('drink_something', Lang:t('consumables.drink_progress'), 5000, false, true, {
+--         disableMovement = false,
+--         disableCarMovement = false,
+--         disableMouse = false,
+--         disableCombat = true
+--     }, {
+--         animDict = 'mp_player_intdrink',
+--         anim = 'loop_bottle',
+--         flags = 49
+--     }, {
+--         model = 'vw_prop_casino_water_bottle_01a',
+--         bone = 60309,
+--         coords = vec3(0.0, 0.0, -0.05),
+--         rotation = vec3(0.0, 0.0, -40),
+--     }, {}, function() -- Done
+--         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
+--         TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().metadata.thirst + Config.Consumables.drink[itemName])
+--     end)
+-- end)
+
+RegisterNetEvent('consumables:client:Drink', function(itemName) -- rz-gym
     QBCore.Functions.Progressbar('drink_something', Lang:t('consumables.drink_progress'), 5000, false, true, {
         disableMovement = false,
         disableCarMovement = false,
@@ -182,6 +230,11 @@ RegisterNetEvent('consumables:client:Drink', function(itemName)
         coords = vec3(0.0, 0.0, -0.05),
         rotation = vec3(0.0, 0.0, -40),
     }, {}, function() -- Done
+        
+        if itemName == "redbull" then
+            exports['ps-buffs']:AddBuff("gym-strength", 300000)
+        end
+
         TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
         TriggerServerEvent('consumables:server:addThirst', QBCore.Functions.GetPlayerData().metadata.thirst + Config.Consumables.drink[itemName])
     end)
