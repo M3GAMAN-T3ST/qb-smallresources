@@ -85,8 +85,28 @@ local recoils = {
     [`weapon_compactlauncher`] = 0.5,
     [`weapon_rayminigun`] = 0.3,
 
-    -- Custom
-    [`weapon_beanbagshotgun`] = 0.0, -- qb-beanbagshotgun
+    -- qb-beanbagshotgun
+    [`weapon_beanbagshotgun`] = 0.0,
+    -- custom-weapons
+	['weapon_ak47'] = 0.5,
+	['weapon_de'] = 0.5,
+	['weapon_fnx45'] = 0.3,
+	['weapon_glock17'] = 0.3,
+	['weapon_m4'] = 0.3,
+	['weapon_hk416'] = 0.3,
+	['weapon_mk14'] = 0.4,
+	['weapon_m110'] = 0.4,
+	['weapon_huntingrifle'] = 0.4,
+	['weapon_ar15'] = 0.4,
+	['weapon_m9'] = 0.4,
+	['weapon_m70'] = 0.5,
+	['weapon_m1911'] = 0.4,
+	['weapon_mac10'] = 0.7,
+	['weapon_uzi'] = 0.7,
+	['weapon_mp9'] = 0.7,
+	['weapon_mossberg'] = 0.7,
+	['weapon_remington'] = 0.7,
+	['weapon_scarh'] = 0.5,
 }
 
 CreateThread(function()
