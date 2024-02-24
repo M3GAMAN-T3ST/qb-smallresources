@@ -227,7 +227,7 @@ Config.BlacklistedPeds = {
 }
 
 Config.WeapDraw = {
-    variants = { 130, 122, 3, 6, 8 },
+    variants = { 130, 122, 3, 6, 8, 160 },
     weapons = {
         --'WEAPON_STUNGUN',
         'WEAPON_PISTOL',
@@ -238,7 +238,7 @@ Config.WeapDraw = {
         'WEAPON_REVOLVER',
         'WEAPON_SNSPISTOL',
         'WEAPON_HEAVYPISTOL',
-        'WEAPON_VINTAGEPISTOL'
+        'WEAPON_VINTAGEPISTOL',
         -- Custom Weapon
         'WEAPON_DE',
         'WEAPON_GLOCK17',
@@ -270,18 +270,18 @@ Config.Teleports = {
             label = false
         }
     },
-    [2] = { --Coke Processing Enter/Exit
-        [1] = {
-            poly = { coords = vector3(909.49, -1589.22, 30.51), heading = 92.24, length = 2, width = 2 },
-            allowVeh = false,
-            label = '[E] Enter Coke Processing'
-        },
-        [2] = {
-            poly = { coords = vector3(1088.81, -3187.57, -38.99), heading = 181.7, length = 2, width = 2 },
-            allowVeh = false,
-            label = '[E] Leave'
-        }
-    }
+    -- [2] = { --Coke Processing Enter/Exit -- removed for md-drugs
+    --     [1] = {
+    --         poly = { coords = vector3(909.49, -1589.22, 30.51), heading = 92.24, length = 2, width = 2 },
+    --         allowVeh = false,
+    --         label = '[E] Enter Coke Processing'
+    --     },
+    --     [2] = {
+    --         poly = { coords = vector3(1088.81, -3187.57, -38.99), heading = 181.7, length = 2, width = 2 },
+    --         allowVeh = false,
+    --         label = '[E] Leave'
+    --     }
+    -- }
 }
 
 Config.CarWash = {
