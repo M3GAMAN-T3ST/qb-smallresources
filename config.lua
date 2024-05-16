@@ -4,6 +4,7 @@ Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use qb-target in
 Config.PauseMapText = ''                                     -- Text shown above the map when ESC is pressed. If left empty 'FiveM' will appear
 Config.HarnessUses = 20
 Config.DamageNeeded = 100.0                                  -- amount of damage till you can push your vehicle. 0-1000
+Config.Logging = 'discord'                                   -- fivemanage
 
 Config.AFK = {
     ignoredGroups = {
@@ -88,6 +89,8 @@ Config.Disable = {
     pistolWhipping = true,                                        -- disables pistol whipping
     driveby = false,                                              -- disables driveby
 }
+
+Config.RelieveWeedStress = math.random(15, 20) -- stress relief amount (100 max)
 
 Config.Consumables = {
     eat = { -- default food items
